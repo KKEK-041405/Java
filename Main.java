@@ -1,19 +1,31 @@
-import java.io.*;
-import java.io.IOException;
-import java.nio.file.Path;
-import java.util.*;
+//import packages.*;
 
-import packages.*;
-public class Main extends write {
-  public static Scanner inputs;
+import java.nio.file.Path;
+import java.io.*;
+import java.util.*;
+import java.io.IOException;
+
+
+
+public class Main {
   public static void main(String[] args) throws IOException
   {
-    if(inputs == null){
-      System.out.println(read.readinput());
+
+    Scanner sc = new Scanner(System.in);
+    int total_submisions = 0;
+    int questions = Integer.parseInt(sc.nextLine());
+    for (int i = 0; i < questions; i++) {
+      char x[] = sc.nextLine().toCharArray();
+      int votes = 0;
+      for (char a : x) {
+        if(a == '1'){
+            votes++;
+        }
+      }
+      if(votes >= 2){
+        total_submisions++;
+      }
     }
-    while (inputs != null && read.inputs.hasNextLine()) {
-      System.out.println(read.readinput());
-    }
-    output();
+    System.out.println(total_submisions);
   }
 }
