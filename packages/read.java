@@ -11,7 +11,7 @@ public class read {
     throws IOException{
         if(inputs == null){
             try {
-                inputs = new Scanner(Path.of("input.txt"));
+                inputs = new Scanner(Path.of("io files\\input.txt"));
             }
             catch(IOException e) {
                 e.printStackTrace();

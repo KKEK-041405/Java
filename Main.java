@@ -1,19 +1,20 @@
-import java.io.*;
 import java.io.IOException;
-import java.nio.file.Path;
 import java.util.*;
 
 import packages.*;
-public class Main extends write {
-  public static Scanner inputs;
+public class Main extends function {
   public static void main(String[] args) throws IOException
   {
+    ArrayList<String> output = new ArrayList<String>();
     if(inputs == null){
-      System.out.println(read.readinput());
+      output.add(work(readinput()));
     }
-    while (inputs != null && read.inputs.hasNextLine()) {
-      System.out.println(read.readinput());
+    while (inputs != null && inputs.hasNextLine()) {
+
+      output.add(work(readinput()));
     }
-    output();
-  }
+    
+    output(output);
+    }   
+  
 }
